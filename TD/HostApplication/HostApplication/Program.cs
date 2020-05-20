@@ -19,7 +19,7 @@ namespace HostApplication
                 TcpChannel channel = new TcpChannel (12000);
                 ChannelServices.RegisterChannel(channel, true);
                 RemotingConfiguration.RegisterWellKnownServiceType(
-                    typeof(HostObject), "HostObject", WellKnownObjectMode.Singleton);
+                    typeof(HostObject), "HostObject", WellKnownObjectMode.SingleCall);
                 Console.WriteLine("Remote object ready at server side !");
                 Console.ReadLine();
             } catch
